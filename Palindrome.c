@@ -1,11 +1,11 @@
 #include<stdio.h>
 
-int checker(char*)
+int checker(char*);
 
-int main{
+int main() {
   char ch[50];
   int check;
-  printf("Enter the word to be checked");
+  printf("Enter the word to be checked:\t");
   scanf("%s",ch);
   check=checker(ch);
   if(!check)
@@ -15,10 +15,11 @@ int main{
 }
 
 int checker(char* c){
-  char temp, size,flag=0;
-  for(int i=0;c[i]!='\0';i++);
-  size=i;
-  for(int i=0,int j=size-1;i<j;i++,j--)
+  char temp;
+  int size,flag=0,l;
+  for(l=0;c[l]!='\0';l++);
+  size=l;
+  for(int i=0, j=size-1;i<j;i++,j--)
       if(c[i]!=c[j])
         flag=1;
   return flag;
