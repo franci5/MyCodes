@@ -15,7 +15,6 @@ int main() {
 }
 
 int checker(char* c){
-  char temp;
   int size,flag=0,l;
   for(l=0;c[l]!='\0';l++);
   size=l;
